@@ -1,0 +1,170 @@
+{
+  "categories": [
+    {
+      "id": "starters",
+      "name": "Starters & Soups",
+      "items": [
+        {
+          "id": "beef-broth",
+          "name": "Clear Beef Broth",
+          "description": "With semolina dumpling or sliced pancakes.",
+          "price": 6.90,
+          "image": "/images/beef-broth.png"
+        },
+        {
+          "id": "beef-tartare",
+          "name": "Beef Tartare",
+          "description": "With classic marinade.",
+          "price": 20.50,
+          "image": "/images/beef-tartare.png"
+        },
+        {
+          "id": "spinach-salad",
+          "name": "Baby Spinach Salad",
+          "description": "With pear, nuts, cream cheese, walnut oil and honey.",
+          "price": 16.50,
+          "image": "/images/spinach-salad.png"
+        },
+        {
+          "id": "sweetbreads",
+          "name": "Pan-fried Sweetbreads",
+          "description": "Choice of pan-fried sweetbreads with sauce Tartare.",
+          "price": 16.50,
+          "image": "/images/sweetbreads.png"
+        }
+      ]
+    },
+    {
+      "id": "mains",
+      "name": "Main Dishes",
+      "items": [
+        {
+          "id": "figlmueller-schnitzel",
+          "name": "Figlmüller-Schnitzel",
+          "description": "Our original made of pork since 1905.",
+          "price": 21.90,
+          "image": "/images/schnitzel.png"
+        },
+        {
+          "id": "wiener-schnitzel",
+          "name": "Wiener Schnitzel of Veal",
+          "description": "The classic Viennese veal schnitzel.",
+          "price": 28.90,
+          "image": "/images/wiener-schnitzel.png"
+        },
+        {
+          "id": "chicken-cordon-bleu",
+          "name": "Chicken Cordon Bleu",
+          "description": "Golden-brown fried chicken stuffed with ham and cheese.",
+          "price": 21.50,
+          "image": "/images/cordon-bleu.png"
+        },
+        {
+          "id": "planted-schnitzel",
+          "name": "Planted Viennese Schnitzel (Vegan)",
+          "description": "Vegan schnitzel made from pea protein, with green side salad.",
+          "price": 22.50,
+          "image": "/images/vegan-schnitzel.png"
+        },
+        {
+          "id": "boiled-beef",
+          "name": "Viennese Boiled Beef",
+          "description": "Served in the pot with chive sauce, apple horseradish and browned potatoes.",
+          "price": 28.50,
+          "image": "/images/tafelspitz.png"
+        },
+        {
+          "id": "veal-goulash",
+          "name": "Creamy Veal Goulash",
+          "description": "With dumplings 'spaetzle'.",
+          "price": 21.50,
+          "image": "/images/goulash.png"
+        },
+        {
+          "id": "sirloin-steak",
+          "name": "Sirloin Steak",
+          "description": "With onions and fried potatoes.",
+          "price": 27.90,
+          "image": "/images/steak.png"
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Salads & Sides",
+      "items": [
+        {
+          "id": "mixed-salad",
+          "name": "Small Mixed Salad",
+          "description": "Fresh seasonal greens.",
+          "price": 6.90,
+          "image": "/images/mixed-salad.png"
+        },
+        {
+          "id": "tomato-salad",
+          "name": "Tomato Salad",
+          "description": "From rare kinds of tomatoes.",
+          "price": 8.50,
+          "image": "/images/tomato-salad.png"
+        },
+        {
+          "id": "figlmueller-fries",
+          "name": "Figlmüller Fries",
+          "description": "Crispy golden fries.",
+          "price": 6.50,
+          "image": "/images/fries.png"
+        },
+        {
+          "id": "parsley-potatoes",
+          "name": "Parsley Potatoes",
+          "description": "Classic Viennese side dish.",
+          "price": 5.50,
+          "image": "/images/potatoes.png"
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "items": [
+        {
+          "id": "chocolate-cake",
+          "name": "Warm Chocolate Cake",
+          "description": "With warm chocolate sauce and whipped cream.",
+          "price": 10.50,
+          "image": "/images/chocolate-cake.png"
+        },
+        {
+          "id": "kaiserschmarrn",
+          "name": "Kaiserschmarrn",
+          "description": "Shredded pancakes with stewed plums.",
+          "price": 13.90,
+          "image": "/images/kaiserschmarrn.png"
+        },
+        {
+          "id": "sacher-cube",
+          "name": "Sacher Cube",
+          "description": "With whipped cream.",
+          "price": 8.50,
+          "image": "/images/sacher-cube.png"
+        }
+      ]
+    }
+  ],
+  "restaurant": {
+    "name": "Figlmüller",
+    "tagline": "Home of the Schnitzel since 1905",
+    "locations": [
+      {
+        "name": "Wollzeile",
+        "address": "Wollzeile 5, 1010 Vienna",
+        "hours": "Daily 11:00 AM – 10:30 PM"
+      },
+      {
+        "name": "Bäckerstraße",
+        "address": "Bäckerstraße 6, 1010 Vienna",
+        "hours": "Daily 11:30 AM – 11:30 PM"
+      }
+    ]
+  }
+}

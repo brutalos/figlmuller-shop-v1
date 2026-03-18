@@ -27,17 +27,12 @@ export default function Home() {
           />
         </div>
         <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-          <div className="mb-8 flex justify-center gap-1 opacity-90">
-            {/* 
+          <div className="mb-8 flex justify-center gap-1">
             <img 
               src="https://www.figlmueller.at/wp-content/uploads/2021/07/logo_figlmueller_w.svg" 
               alt="Figlmüller" 
               className="h-24 md:h-32 w-auto"
-            /> 
-            */}
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} className="w-6 h-6 fill-white text-white" />
-            ))}
+            />
           </div>
           <h1 className="text-4xl md:text-7xl mb-8 tracking-tighter leading-tight drop-shadow-2xl font-heading">
             The house special,<br />

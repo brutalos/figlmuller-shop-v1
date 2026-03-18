@@ -1,8 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import fs from 'fs';
+import path from 'path';
+import { ArrowRight, ShoppingBag, Star } from 'lucide-react';
+import MenuItemComponent from '../components/MenuItem';
 
 export default function Home() {
+  const menuPath = path.join(process.cwd(), 'data', 'menu.json');
+  const menuData = JSON.parse(fs.readFileSync(menuPath, 'utf-8'));
+  
+  // Select key items for the homepage
+  const keyItemIds = ['figlmueller-schnitzel', 'wiener-schnitzel', 'kaiserschmarrn', 'mixed-salad'];
+  const keyItems = menuData.categories
+    .flatMap((cat: any) => cat.items)
+    .filter((item: any) => keyItemIds.includes(item.id));
+
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
@@ -15,12 +27,17 @@ export default function Home() {
           />
         </div>
         <div className="relative z-10 text-center text-white px-4 max-w-4xl">
-          <div className="mb-8 flex justify-center opacity-90">
+          <div className="mb-8 flex justify-center gap-1 opacity-90">
+            {/* 
             <img 
               src="https://www.figlmueller.at/wp-content/uploads/2021/07/logo_figlmueller_w.svg" 
               alt="Figlmüller" 
               className="h-24 md:h-32 w-auto"
-            />
+            /> 
+            */}
+            {[...Array(5)].map((_, i) => (
+              <Star key={i} className="w-6 h-6 fill-white text-white" />
+            ))}
           </div>
           <h1 className="text-4xl md:text-7xl mb-8 tracking-tighter leading-tight drop-shadow-2xl font-heading">
             The house special,<br />
@@ -122,6 +139,35 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vienna Classics at Home Section */}
+      <section className="py-32 bg-[#F6F6EE] border-t border-[#005538]/5">
+        <div className="center">
+          <header className="text-center mb-16">
+            <span className="font-heading text-xs tracking-[0.3em] uppercase text-[#7BA693] mb-4 block">Delivery & Takeaway</span>
+            <h2 className="text-4xl md:text-5xl font-heading text-[#005538] mb-6">Vienna Classics at Home</h2>
+            <p className="font-body text-[#005538]/60 max-w-2xl mx-auto">
+              Can't make it to our restaurant? Bring the taste of Figlmüller to your doorstep. Order our signature dishes online for delivery.
+            </p>
+          </header>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 mb-16">
+            {keyItems.map((item: any) => (
+              <MenuItemComponent key={item.id} item={item} />
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link 
+              href="/menu" 
+              className="inline-flex items-center gap-3 bg-[#005538] text-white px-8 py-4 rounded-xl font-heading text-sm font-bold uppercase tracking-widest hover:bg-[#005538]/90 transition-all shadow-lg"
+            >
+              <ShoppingBag size={18} />
+              Order Full Menu Online
+            </Link>
           </div>
         </div>
       </section>

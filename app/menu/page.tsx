@@ -1,6 +1,7 @@
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
+import MenuItemComponent from '../../components/MenuItem';
 
 interface MenuItem {
   id: string;
@@ -26,6 +27,9 @@ export default function MenuPage() {
         <header className="text-center mb-20">
           <span className="font-heading text-xs tracking-[0.3em] uppercase text-[#7BA693] mb-4 block">Our Culinary Highlights</span>
           <h1 className="text-5xl md:text-7xl font-heading text-[#005538]">The Menu</h1>
+          <p className="mt-8 font-body text-[#005538]/70 max-w-2xl mx-auto">
+            Experience the taste of tradition. Add our specialties to your cart for a Viennese feast at home.
+          </p>
         </header>
 
         <div className="space-y-24">
@@ -38,15 +42,7 @@ export default function MenuPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
                 {category.items.map((item: MenuItem) => (
-                  <div key={item.id} className="flex flex-col gap-4 group">
-                    <div className="flex justify-between items-baseline border-b border-[#005538]/10 pb-2 group-hover:border-[#005538]/30 transition-colors">
-                      <h3 className="text-xl font-heading text-[#005538] leading-tight">{item.name}</h3>
-                      <span className="font-body font-bold text-[#005538]">€ {item.price.toFixed(2)}</span>
-                    </div>
-                    <p className="font-body text-sm opacity-70 leading-relaxed max-w-md">
-                      {item.description}
-                    </p>
-                  </div>
+                  <MenuItemComponent key={item.id} item={item} />
                 ))}
               </div>
             </section>
